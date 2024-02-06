@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: red;
+        }
+        p {
+            font-size: 20px;
+            color: darkred;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <p>I can't imagine a day without you, would you be my Valentine?</p>
+    <button class="button" onclick="handleResponse(true)">Yes</button>
+    <button class="button" onclick="handleResponse(false)">No</button>
+    
+    <script>
+        function handleResponse(answer) {
+            if (answer) {
+                alert('Yay! You said yes!');
+            } else {
+                // If the user clicks "No", keep asking
+                while (!confirm('Are you sure? Won\'t you reconsider and be my Valentine?')) {
+                    // The loop will continue until the user clicks "OK"
+                }
+            }
+        }
+    </script>
+</body>
+</html>
